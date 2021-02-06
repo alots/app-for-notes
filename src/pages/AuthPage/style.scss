@@ -1,0 +1,18 @@
+#root {
+    height: 100vh;
+}
+
+.ant-row.ant-form-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    height: 200px;
+}
+
+.loginForm__logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}

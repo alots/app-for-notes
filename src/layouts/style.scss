@@ -1,0 +1,26 @@
+.main-layout {
+    height: 100vh;
+
+    &__logo {
+        padding: 10px;
+        color:white;
+    }
+
+    &__header {
+        background-color: #f0f2f5;
+    }
+}
+
+.logo {
+    width: 180px;
+    height: 38px;
+}
+
+.ant-layout-header.main-layout__header {
+    background-color: #f0f2f5;
+}
+
+.anticon.anticon-menu-fold.trigger, 
+.anticon.anticon-menu-unfold.trigger{
+    padding-left: 10px;
+}
