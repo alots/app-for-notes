@@ -6,8 +6,7 @@ import './style.scss';
 
 const Note: React.FC<React.PropsWithChildren<NoteProps>> = ({
     name,
-    description,
-    createdAt
+    description
 }) => {
     return (
         <Fragment>

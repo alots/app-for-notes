@@ -5,13 +5,19 @@ import { Form, Input, Button, Checkbox } from 'antd';
 
 import AuthLogo from './AuthLogo';
 import {routes} from '../../lib/config/routes';
+import {successUser} from '../../lib/fetchers/newUser';
 
 import './style.scss';
 
+interface UserAttributes {
+    mail: string,
+    password: string 
+}
+
 
 const LoginPage: React.FC = () => {
-    const onFinish = (values: any) => {
-        console.log('Success:', values);
+    const onFinish = (values: UserAttributes) => {
+        successUser(values);
       };
     
       const onFinishFailed = (errorInfo: any) => {

@@ -1,10 +1,16 @@
 import React from 'react';
 import {Form, Input, Button} from 'antd';
+import {addUser} from '../../lib/fetchers/newUser';
+
+interface UserAttributes {
+    mail: string,
+    password: string 
+} 
 
 const RegistrationPage: React.FC = () => {
 
-    const onFinish = (values: any) => {
-        console.log('Save:', values);
+    const onFinish = (values: UserAttributes) => {
+        addUser(values);
       };
 
     const onFinishFailed = (errorInfo: any) => {

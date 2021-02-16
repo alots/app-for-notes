@@ -2,20 +2,15 @@ import React from 'react';
 import { Form, Input, Button } from 'antd';
 
 import moment from 'moment';
+import {NoteProps} from '../../lib/types/index';
+import {newNote} from '../../lib/fetchers/notes';
 
 import './style.scss';
 
-interface IFormInput {
-    name: string,
-    description: string,
-    createdAt: string,
-}
-
 const NewNotePage: React.FC = () => {
 
-    const onSubmit = (data: IFormInput) =>{
-        data.createdAt = moment().toISOString(true);
-        console.log(data);
+    const onSubmit = (data: NoteProps) =>{
+        newNote(data);
     } 
     return (
         <div className='form'>
