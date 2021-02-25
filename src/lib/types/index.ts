@@ -1,5 +1,10 @@
 export interface NoteProps {
-    name: string,
-    description: string,
-    createdAt: string
+  uid: string,
+  title: string,
+  description: string,
+  createdAt: string
+}
+
+export interface NotePropsList {
+  notes: NoteProps[]
 }

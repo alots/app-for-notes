@@ -13,19 +13,19 @@ import LoginRouter from './LoginRouter';
 const history = createBrowserHistory();
 
 const Routers: React.FC = () => {
-    return (
-        <Router history={history}>
-            <Switch>
-                <LoginRouter path={routes.login} component={LoginPage} />
-                <LoginRouter path={routes.registration} component={RegistrationPage} />
-                <MainRouter path={routes.notesList} component={NotesListPage} />
-                <MainRouter path={routes.newnotes} component={NewNotePage} />
-                <Route exact path='/'>
-                    <Redirect to={routes.login}/>
-                </Route>
-            </Switch>          
-        </Router>
-    );
+  return (
+    <Router history={history}>
+      <Switch>
+        <LoginRouter path={routes.login} component={LoginPage} />
+        <LoginRouter path={routes.registration} component={RegistrationPage} />
+        <MainRouter path={routes.notesList} component={NotesListPage} />
+        <MainRouter path={routes.newnotes} component={NewNotePage} />
+        <Route exact path='/'>
+          <Redirect to={routes.login}/>
+        </Route>
+      </Switch>          
+    </Router>
+  );
 }
 
 export default Routers;

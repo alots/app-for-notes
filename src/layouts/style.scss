@@ -24,3 +24,10 @@
 .anticon.anticon-menu-unfold.trigger{
     padding-left: 10px;
 }
+
+.ant-layout-content.main-layout__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
